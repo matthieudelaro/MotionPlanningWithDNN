@@ -1,16 +1,17 @@
 # MotionPlanningWithDNN
 
-Maps are similar to images, and Deep Neural Networks are good at classifying images. So why not classify a map, a starting point, and a goal with a deep neural network ? The nice result is to have the network answer: LEFT, LEFT, LEFT, then TOP, and then LEFT : you have reached your destination.
+Maps seen from the top are similar to images, and deep neural networks are good at classifying images. So I thought : why not classify a map, a starting point, and a goal with a deep neural network ? The nice result is to have the network answer: from this point, go LEFT, LEFT, LEFT, then TOP, and then LEFT : you have reached your destination.
 
 ## Results
-See result below. This is a map seen from the top, with obstacles in black, reachable areas in white, the starting location in red, and the goal in green. At each step, the network says which direction to take, until the goal is reached:
+This is a map seen from the top, of 10x10 cells, with obstacles in black, reachable areas in white, the starting location in red, and the goal in green. At each step, the network says which direction to take, until the goal is reached:
 
-![alt tag](https://raw.github.com/matthieudelaro/MotionPlanningWithDNN/master/results/success_avoid_wall_001442/success_001442step000_willGo_left.png)
-![alt tag](https://raw.github.com/matthieudelaro/MotionPlanningWithDNN/master/results/success_avoid_wall_001442/success_001442step001_willGo_leftBottom.png)
-![alt tag](https://raw.github.com/matthieudelaro/MotionPlanningWithDNN/master/results/success_avoid_wall_001442/success_001442step002_willGo_rightBottom.png)
-![alt tag](https://raw.github.com/matthieudelaro/MotionPlanningWithDNN/master/results/success_avoid_wall_001442/success_001442step003_willGo_rightBottom.png)
-![alt tag](https://raw.github.com/matthieudelaro/MotionPlanningWithDNN/master/results/success_avoid_wall_001442/success_001442step004_willGo_bottom.png)
-![alt tag](https://raw.github.com/matthieudelaro/MotionPlanningWithDNN/master/results/success_avoid_wall_001442/success_001442step005_success.png)
+<img src="https://raw.github.com/matthieudelaro/MotionPlanningWithDNN/master/results/success_avoid_wall_001442/asGif_200x200px.gif" width="200"> 
+
+(images for each step are available in directory ./results/success_avoid_wall_001442/)
+
+
+## References
+The network has been trained with Lasagne : https://github.com/Lasagne/Lasagne
 
 
 ## The MIT License (MIT)
